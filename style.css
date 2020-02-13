@@ -39,17 +39,17 @@ textarea {
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: black;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
 }
 
 .saveBtn {
@@ -67,8 +67,6 @@ textarea {
   transition: all .3s ease-in-out;
 }
 
-
-
 #timeblock {
   background-color: #ffffff;
   color: #000000;
@@ -76,11 +74,8 @@ textarea {
   padding-top: 5px;
 }
 
-
 @media screen and (max-width: 992px) {
   section {
     margin-bottom: 20px;
   }
 }
-
-
