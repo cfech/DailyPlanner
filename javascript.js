@@ -1,22 +1,47 @@
+
+var TimeBlocks = $(".timeblock")
+
+
 // Setting date a top of screen
 $("#currentDay").text(moment().format("dddd, MMMM Do"))
 
+
+
+
+
+//Setting date 
 var currentTime = moment().format('h:mm:ss a')
 
-var timeBlockContent = $("timeblock").val
-var beginningTime = moment('10', 'h');
-console.log(beginningTime)
+
+
+// console.log(CurrTime) /// the it is right now 
 
 
 
-// if (Time > currentTime) {
-//     $("#textArea").addClass("future")
-//     console.log("in the area function")
-// } else if (begining time = currret time ) {
-//      addclass("present")
-// }else if (begining time is pass current time ){
-//add class past 
-//}
+
+//looop willl run once for each time block 
+for (i = 0; i < TimeBlocks.length; i++) {
+    let OurTime = $(TimeBlocks[i]).data("miltime")
+    var CurrTime = moment().format("HH");
+    console.log(OurTime)// the time in the time blocks 
+    console.log(CurrTime)// time it is right now 
+    console.log(TimeBlocks)
+     var currentTimeBlock = $(TimeBlocks[i])
+     var currentTxtArea = currentTimeBlock.next()
+     console.log(currentTxtArea)
+    if (CurrTime > OurTime) {
+        $(currentTxtArea).addClass("past")
+        console.log("past")
+    } else if (CurrTime == OurTime) {
+        $(currentTxtArea).addClass("present")
+        console.log("present")
+    } else if (CurrTime < OurTime) {
+        $(currentTxtArea).addClass("future")
+        console.log("future")
+    }
+
+
+}
 
 
 
